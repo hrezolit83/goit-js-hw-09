@@ -91,11 +91,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
     const options = {
         captions: true,
-        captionSelector: 'img',
-        captionType: 'attr',
         captionsData: 'alt',
-        captionPosition: 'bottom',
-        animation: 250,
       };
       
       

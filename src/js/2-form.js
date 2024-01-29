@@ -6,15 +6,15 @@ const savedState = JSON.parse(localStorage.getItem(localStorageKey));
 
 if (savedState) {
   // Filling form fields with saved data
-  form.elements.email.value = savedState.email || '';
-  form.elements.message.value = savedState.message || '';
+  form.elements.email.value = savedState.email;
+  form.elements.message.value = savedState.message;
 }
 
 // Adding input event listener using event delegation
 form.addEventListener('input', event => {
   const formData = {
-    email: form.elements.email.value,
-    message: form.elements.message.value,
+    email: form.elements.email.value.trim(),
+    message: form.elements.message.value.trim(),
   };
 
   // Saving form data to localStorage
@@ -27,8 +27,8 @@ form.addEventListener('submit', event => {
 
   // Getting and logging form data
   const formData = {
-    email: form.elements.email.value,
-    message: form.elements.message.value,
+    email: form.elements.email.value.trim(),
+    message: form.elements.message.value.trim(),
   };
 
   console.log(formData);
